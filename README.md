@@ -4,13 +4,20 @@ A small digital survival kit for a friend on a tough day. Built with plain HTML,
 
 ## Run locally
 
-Open `index.html` in a browser. The photo and fonts require an internet connection; the page and its interactions work without one.
+Open `index.html` in a browser. The artwork, GIF and core interactions work offline; the optional fonts and external game links require an internet connection.
+
+Enter `survival` to open the kit. The password is checked only in the browser and is requested again after a reload.
 
 ## Make it yours
 
-- Change the copy in `index.html` and the surprise messages in `script.js`.
+- Change the copy in `index.html` and the surprise messages in `js/surprises.js`.
 - Adjust the colors and layout in `style.css`.
-- The site will be public when published, so don't include private information without permission.
+- The four quieter original messages remain in `js/surprises.js` as inactive entries. The content overview and ideas are in `docs/INHALTE.md`; asset and external-link notes are in `assets/CREDITS.md`.
+- The password is not security: anyone can inspect the code or access published files directly. Never publish confidential information. Share personal content only with the consent of everyone involved.
+
+## Test
+
+Install Node.js 24 and run `npm ci` and `npx playwright install chromium` once. Run `npm test` for unit tests and `npm run test:e2e` for desktop and mobile browser tests. Tests open the local HTML file directly.
 
 ## Publish with GitHub Pages
 

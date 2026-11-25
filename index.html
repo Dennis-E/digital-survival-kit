@@ -10,57 +10,65 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <script src="js/surprises.js" defer></script>
+  <script src="js/selection.js" defer></script>
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <header class="topbar">
-    <a class="wordmark" href="#top" aria-label="The Bad Day Survival Kit home"><span class="brand-mark">+</span> GOOD DAY DEPARTMENT</a>
-    <span class="top-note">A LITTLE SOMETHING FOR YOU <span aria-hidden="true">&#8599;</span></span>
+    <a class="wordmark" href="#top"><span class="brand-mark">+</span> GOOD DAY DEPARTMENT</a>
+    <span class="top-note">MADE FOR ONE VERY GOOD HUMAN</span>
   </header>
 
   <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <p class="eyebrow"><span class="status-dot"></span> OPEN WHEN LIFE IS BEING A BIT MUCH</p>
-        <h1 id="hero-title">The Bad Day<br><span>Survival Kit.</span></h1>
-        <p class="intro">For the days that are doing the absolute most. Take what you need, leave the rest, and remember: you're doing better than you think.</p>
-        <a class="primary-button" href="#kit">OPEN YOUR KIT <span aria-hidden="true">&#8595;</span></a>
+    <div class="hero experience">
+      <div class="experience-content">
+        <section id="password-view" aria-labelledby="password-title">
+          <p class="eyebrow"><span class="status-dot"></span> OFFICIAL BUSINESS. MOSTLY.</p>
+          <h1 id="password-title">The Bad Day<br><span>Survival Kit.</span></h1>
+          <p class="intro">A small emergency kit for days with a flair for drama. Your appointment with nonsense is ready.</p>
+          <form id="password-form" class="entry-form" novalidate>
+            <label for="password">Password</label>
+            <div class="input-row"><input id="password" name="password" type="password" autocomplete="off" aria-describedby="password-error"><button class="primary-button" type="submit">Open kit <span aria-hidden="true">&#8599;</span></button></div>
+            <p class="field-error" id="password-error" role="alert"></p>
+          </form>
+        </section>
+
+        <section id="greeting-view" aria-labelledby="greeting-title" hidden>
+          <p class="eyebrow"><span class="status-dot"></span> ONE VERY IMPORTANT QUESTION</p>
+          <h1 id="greeting-title" tabindex="-1">Before the<br><span>nonsense.</span></h1>
+          <p class="intro">What should we call the main character?</p>
+          <form id="name-form" class="entry-form">
+            <label for="visitor-name">Your name</label>
+            <div class="input-row"><input id="visitor-name" name="name" maxlength="40" autocomplete="given-name" aria-describedby="name-help"><button class="primary-button" type="submit">Continue <span aria-hidden="true">&#8599;</span></button></div>
+            <p class="field-help" id="name-help">Up to 40 characters.</p>
+            <button type="button" class="text-button" id="skip-name">Skip <span aria-hidden="true">&#8594;</span></button>
+          </form>
+        </section>
+
+        <section id="surprise-view" aria-labelledby="stream-heading" hidden>
+          <div class="stream-top"><p class="eyebrow"><span class="status-dot"></span> A VERY IMPORTANT LITTLE SURPRISE</p></div>
+          <h1 id="stream-heading" class="stream-heading" tabindex="-1">For you, friend</h1>
+          <div class="surprise-layout">
+            <article class="surprise-card" aria-live="polite" aria-atomic="true">
+              <div class="card-top"><span id="surprise-category">A LITTLE SOMETHING</span><span class="card-symbol" aria-hidden="true">&#10035;</span></div>
+              <div><h2 id="surprise-title"></h2><p id="surprise-body"></p><img id="surprise-media" alt="" hidden><iframe id="surprise-iframe" title="" loading="lazy" allow="accelerometer; picture-in-picture" allowfullscreen hidden></iframe><p id="media-error" hidden>That little extra is unavailable right now.</p><button id="motion-button" class="media-button" type="button" hidden>Play animation</button><a id="external-link" class="external-link" target="_blank" rel="noopener noreferrer" hidden></a></div>
+              <span class="card-signoff">GOOD DAY DEPARTMENT <span aria-hidden="true">&#8599;</span></span>
+            </article>
+            <div class="stream-controls">
+              <p class="controls-heading">PICK YOUR KIND OF NONSENSE</p>
+              <div id="category-actions" class="category-actions" role="group" aria-label="Choose a surprise">
+                <button class="category-button" data-category="magical" type="button" aria-pressed="false"><span class="category-icon" aria-hidden="true">&#10033;</span><span>Magical moment</span></button>
+                <button class="category-button" data-category="fascinating" type="button" aria-pressed="false"><span class="category-icon" aria-hidden="true">&#9711;</span><span>Something fascinating</span></button>
+                <button class="category-button" data-category="play" type="button" aria-pressed="false"><span class="category-icon" aria-hidden="true">&#10022;</span><span>Let's play</span></button>
+                <button class="lucky-button" data-category="all" type="button" aria-pressed="true"><span>I'm feeling lucky</span><span aria-hidden="true">&#8599;</span></button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      <div class="hero-footer"><span>EST. FOR THE HARD DAYS</span><span>MADE WITH CARE &amp; QUESTIONABLE HUMOUR</span></div>
-    </section>
-
-    <section class="kit-section" id="kit" aria-labelledby="kit-title">
-      <div class="section-heading">
-        <div><p class="eyebrow">YOUR POCKET-SIZED RESET</p><h2 id="kit-title">First aid for a day<br>like this.</h2></div>
-        <p class="section-intro">No fixing your whole life required. Just a tiny moment for you.</p>
-      </div>
-
-      <div class="kit-grid">
-        <article class="kit-card laugh-card">
-          <div class="card-top"><span>01 / EMERGENCY COMEDY</span><span class="card-symbol" aria-hidden="true">&#10035;</span></div>
-          <h3>A little nonsense.</h3>
-          <p class="card-description">For when your brain needs a change of channel.</p>
-          <div class="message" id="message" aria-live="polite">You have survived 100% of your bad days. Your track record is honestly a little intimidating.</div>
-          <button class="dark-button" id="another-message" type="button">ANOTHER ONE <span aria-hidden="true">&#8599;</span></button>
-        </article>
-
-        <article class="kit-card breathe-card">
-          <div class="card-top"><span>02 / A MOMENT TO PAUSE</span><span class="card-symbol" aria-hidden="true">&#10043;</span></div>
-          <h3>Unclench. Breathe.</h3>
-          <p class="card-description">Drop your shoulders. Unstick your tongue from the roof of your mouth. Yes, really.</p>
-          <div class="breath-prompt" id="breath-prompt" aria-live="polite">A small pause is still progress.</div>
-          <button class="outline-button" id="breathe-button" type="button">TAKE A BREATH <span aria-hidden="true">&#8599;</span></button>
-        </article>
-
-        <article class="kit-card reminder-card">
-          <div class="card-top"><span>03 / OFFICIAL REMINDER</span><span class="card-symbol" aria-hidden="true">&#9825;</span></div>
-          <h3>You're allowed to<br>be a person.</h3>
-          <p>Not every day has to be productive, graceful, or even remotely photogenic. Sometimes getting through it is the whole assignment.</p>
-          <div class="reminder-signoff">SENT WITH LOVE <span aria-hidden="true">&#8599;</span></div>
-        </article>
-      </div>
-    </section>
+    </div>
   </main>
-  <footer><span>THE BAD DAY SURVIVAL KIT <span aria-hidden="true">&#10035;</span></span><span>MADE FOR ONE VERY GOOD HUMAN.</span></footer>
+  <footer><span>THE BAD DAY SURVIVAL KIT <span aria-hidden="true">&#10035;</span></span><span>MADE WITH CARE &amp; QUESTIONABLE HUMOUR</span></footer>
 </body>
 </html>
