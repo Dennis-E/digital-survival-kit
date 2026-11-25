@@ -1,2 +1,14 @@
 .DS_Store
 Thumbs.db
+TODO.md
+IDEEN.md
+docs/IDEEN.md
+INHALTE.md
+docs/INHALTE.md
+node_modules/
+test-results/
+playwright-report/
+dist/
+build/
+*.log
+.env*
