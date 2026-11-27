@@ -16,6 +16,7 @@ const iframe = document.querySelector('#surprise-iframe');
 const mediaError = document.querySelector('#media-error');
 const motionButton = document.querySelector('#motion-button');
 const externalLink = document.querySelector('#external-link');
+const externalPreview = document.querySelector('#external-preview');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let motionPlaying = false;
 const labels = { magical: 'MAGICAL MOMENT', fascinating: 'SOMETHING FASCINATING', play: 'FIELD TRIP' };
@@ -38,6 +39,8 @@ function renderSurprise(item) {
   motionButton.textContent = 'Play animation';
   externalLink.hidden = true;
   externalLink.removeAttribute('href');
+  externalPreview.hidden = true;
+  externalPreview.removeAttribute('src');
   if (!item) {
     categoryLabel.textContent = 'A LITTLE SOMETHING';
     title.textContent = 'Nothing here just yet.';
@@ -50,15 +53,25 @@ function renderSurprise(item) {
       iframe.title = item.title;
       iframe.hidden = false;
       iframe.src = item.embedUrl;
+      externalLink.href = item.sourceUrl;
+      externalLink.textContent = 'Open on YouTube';
+      externalLink.hidden = false;
     } else if (item.kind === 'gif') {
       media.alt = item.mediaAlt || '';
-      media.src = item.still;
+      motionPlaying = !reducedMotion.matches;
+      media.src = motionPlaying ? item.media : item.still;
       media.hidden = false;
       motionButton.hidden = false;
+      motionButton.textContent = motionPlaying ? 'Stop animation' : 'Play animation';
     } else if (item.kind === 'link') {
       externalLink.href = item.url;
       externalLink.textContent = `Visit ${item.linkLabel}`;
       externalLink.hidden = false;
+      if (item.preview) {
+        externalPreview.src = item.preview;
+        externalPreview.alt = `${item.linkLabel} preview`;
+        externalPreview.hidden = false;
+      }
     }
   }
 }
@@ -67,8 +80,8 @@ function begin(name) {
   const visitorName = name.trim().slice(0, 40) || 'friend';
   heading.textContent = `For you, ${visitorName}`;
   deck = new SurpriseDeck(surprises);
-  updateSelection('all');
-  renderSurprise(deck.next());
+  updateSelection('fascinating');
+  renderSurprise(deck.open('fascination-biking'));
   showView(surpriseView, heading);
 }
 

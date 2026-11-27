@@ -38,6 +38,24 @@ test('contains at least three verified active fascination moments', () => {
   assert.ok(fascination.every(item => item.kind === 'iframe' && item.rightsStatus === 'approved' && item.embedStatus === 'verified'));
 });
 
+test('contains at least fifty uploaded active GIF magical moments', () => {
+  const uploaded = new SurpriseDeck(sandbox.items).items.filter(item => item.category === 'magical' && item.kind === 'gif' && item.id.startsWith('gif-'));
+  assert.ok(uploaded.length >= 50);
+  assert.equal(new Set(uploaded.map(item => item.id)).size, uploaded.length);
+});
+
+test('contains at least twelve distinct active GIF magical moments', () => {
+  const gifs = new SurpriseDeck(sandbox.items).items.filter(item => item.category === 'magical' && item.kind === 'gif');
+  assert.ok(gifs.length >= 12);
+  assert.equal(new Set(gifs.map(item => item.id)).size, gifs.length);
+});
+
+test('contains at least eight play cards with previews', () => {
+  const games = new SurpriseDeck(sandbox.items).items.filter(item => item.category === 'play' && item.kind === 'link');
+  assert.ok(games.length >= 8);
+  assert.ok(games.every(item => item.preview));
+});
+
 test('contains at least six distinct active magical moments', () => {
   const moments = new SurpriseDeck(sandbox.items).items.filter(item => item.category === 'magical');
   const jokes = moments.filter(item => item.kind === 'text');

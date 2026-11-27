@@ -87,7 +87,7 @@ description: "Task list for magical moments and fascination"
 
 ### Implementation for User Story 2
 
-- [ ] T023 [US2] Add only approved fascination items to surprises.js with `embedUrl`, `sourceUrl`, `creator`, `rightsStatus: approved`, `embedStatus: verified` and no autoplay
+- [x] T023 [US2] Add only approved fascination items to surprises.js with `embedUrl`, `sourceUrl`, `creator`, `rightsStatus: approved`, `embedStatus: verified` and no autoplay
 - [x] T024 [US2] Add `Something fascinating` to the category markup in index.html
 - [x] T025 [US2] Render fascination items with title, short description, lazy iframe creation, source credit and fallback in script.js
 - [x] T026 [P] [US2] Add desktop/mobile iframe sizing and blocked-media styles in style.css
