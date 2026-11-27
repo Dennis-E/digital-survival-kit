@@ -10,5 +10,6 @@ test-results/
 playwright-report/
 dist/
 build/
+public/
 *.log
 .env*

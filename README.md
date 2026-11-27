@@ -19,12 +19,16 @@ Enter `survival` to open the kit. The password is checked only in the browser an
 
 Install Node.js 24 and run `npm ci` and `npx playwright install chromium` once. Run `npm test` for unit tests and `npm run test:e2e` for desktop and mobile browser tests. Tests open the local HTML file directly.
 
+## Publish with GitLab Pages
+
+1. Create a public GitLab project and copy its HTTPS clone URL.
+2. Add GitLab as a remote, for example `git remote add gitlab https://gitlab.com/<group>/<project>.git`.
+3. Commit and push `main`: `git add .`, `git commit -m "Publish survival kit"`, `git push gitlab main`.
+4. Open **Build > Pipelines**. The included `.gitlab-ci.yml` creates the Pages artifact and starts deployment.
+5. Open **Deploy > Pages** to find the public URL, usually `https://<namespace>.gitlab.io/<project>/`.
+
+A `.gitlab-ci.yml` change is processed only after it is pushed to the default branch. GitLab Pages is public, and the password is only a browser-side gate.
+
 ## Publish with GitHub Pages
 
-1. Create a public repository on GitHub, without initializing it with a README.
-2. In this directory, run `git add .`, then `git commit -m "Initial survival kit"`.
-3. Add the repository URL with `git remote add origin <repository-url>` and push with `git push -u origin main`.
-4. On GitHub, open **Settings > Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`, and save.
-5. Once deployed, the URL is shown in the Pages settings. It is usually `https://<username>.github.io/<repository-name>/`.
-
-GitHub Pages is public. If you use another branch name, select that branch in the Pages settings and push it instead.
+The current repository can also remain on GitHub. Its GitHub Pages settings can publish `main` directly from `/ (root)`.
