@@ -1,4 +1,4 @@
-# Feature Specification: Überraschungsstrom für PERSON
+# Feature Specification: Überraschungsstrom für die nutzende Person
 
 **Feature Branch**: Nicht angelegt; aktueller Branch bleibt unverändert.
 
@@ -6,20 +6,20 @@
 
 **Status**: Draft
 
-**Input**: Ein persönliches Digital Survival Kit für PERSON mit Benutzerführung nach Option 3: Nach einer einfachen Passwortabfrage und Begrüßung erscheint direkt eine Überraschung; weitere Überraschungen und verschiedene Inhaltsarten sind einfach zugänglich.
+**Input**: Ein persönliches Digital Survival Kit für die nutzende Person mit Benutzerführung nach Option 3: Nach einer einfachen Passwortabfrage und Begrüßung erscheint direkt eine Überraschung; weitere Überraschungen und verschiedene Inhaltsarten sind einfach zugänglich.
 
 ## Clarifications
 
 ### Session 2026-11-24
 
 - Q: Wie soll die Passwortabfrage für die erste Version funktionieren? → A: Als einfache Einstiegshürde mit dem vom Absender geteilten Passwort `survival`, nicht als echte Zugriffskontrolle. Die technische Umsetzung ist im Plan festgehalten.
-- Q: Soll PERSON das Passwort nach jedem Neuladen der Seite erneut eingeben? → A: Ja, bei jedem Neuladen erscheint die Passwortabfrage erneut.
+- Q: Soll die nutzende Person das Passwort nach jedem Neuladen der Seite erneut eingeben? → A: Ja, bei jedem Neuladen erscheint die Passwortabfrage erneut.
 
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Eine Überraschung nach der Begrüßung (Priority: P1)
 
-PERSON öffnet das Kit, wird freundlich begrüßt und kann ihren Namen eingeben oder den Schritt überspringen. Direkt danach sieht sie eine einzelne Überraschung, ohne zunächst eine Kategorie auswählen zu müssen. Mit „Another one“ erhält sie eine weitere.
+Die nutzende Person öffnet das Kit, wird freundlich begrüßt und kann ihren Namen eingeben oder den Schritt überspringen. Direkt danach sieht sie eine einzelne Überraschung, ohne zunächst eine Kategorie auswählen zu müssen. Mit „Another one“ erhält sie eine weitere.
 
 **Why this priority**: Der unmittelbare, spielerische Einstieg ist der Kern des gewählten Erlebnisses.
 
@@ -27,14 +27,14 @@ PERSON öffnet das Kit, wird freundlich begrüßt und kann ihren Namen eingeben 
 
 **Acceptance Scenarios**:
 
-1. **Given** die Begrüßung ist geöffnet, **When** PERSON einen Namen eingibt und fortfährt, **Then** erscheint direkt eine Überraschung und die Anrede verwendet den eingegebenen Namen.
-2. **Given** die Begrüßung ist geöffnet, **When** PERSON sie überspringt, **Then** erscheint direkt eine Überraschung mit neutraler Anrede.
-3. **Given** mindestens zwei passende Überraschungen sind verfügbar, **When** PERSON „Another one“ wählt, **Then** erscheint eine andere Überraschung.
-4. **Given** mehrere passende Überraschungen sind verfügbar, **When** PERSON sie wiederholt abruft, **Then** werden alle passenden Inhalte einmal gezeigt, bevor sich einer wiederholt.
+1. **Given** die Begrüßung ist geöffnet, **When** die nutzende Person einen Namen eingibt und fortfährt, **Then** erscheint direkt eine Überraschung und die Anrede verwendet den eingegebenen Namen.
+2. **Given** die Begrüßung ist geöffnet, **When** die nutzende Person sie überspringt, **Then** erscheint direkt eine Überraschung mit neutraler Anrede.
+3. **Given** mindestens zwei passende Überraschungen sind verfügbar, **When** die nutzende Person „Another one“ wählt, **Then** erscheint eine andere Überraschung.
+4. **Given** mehrere passende Überraschungen sind verfügbar, **When** die nutzende Person sie wiederholt abruft, **Then** werden alle passenden Inhalte einmal gezeigt, bevor sich einer wiederholt.
 
 ### User Story 2 - Das Kit mit einer einfachen Passwortabfrage öffnen (Priority: P1)
 
-PERSON erhält vom Absender das Passwort und gibt es beim Öffnen des Kits ein. Die Abfrage verdeckt die Inhalte in der normalen Seitenansicht, schützt sie aber nicht vor Zugriff über Quelltext oder direkte Dateiadressen.
+Die nutzende Person erhält vom Absender das Passwort und gibt es beim Öffnen des Kits ein. Die Abfrage verdeckt die Inhalte in der normalen Seitenansicht, schützt sie aber nicht vor Zugriff über Quelltext oder direkte Dateiadressen.
 
 **Why this priority**: Die Abfrage verhindert, dass beiläufige Besucher die Inhalte sofort in der normalen Ansicht sehen.
 
@@ -44,14 +44,14 @@ PERSON erhält vom Absender das Passwort und gibt es beim Öffnen des Kits ein. 
 
 1. **Given** die Seite wird in der normalen Ansicht geöffnet, **When** noch kein richtiges Passwort eingegeben wurde, **Then** zeigt die Seite die Passwortabfrage statt der Kit-Inhalte.
 2. **Given** die Passwortabfrage ist geöffnet, **When** ein falsches Passwort eingegeben wird, **Then** bleibt die normale Kit-Ansicht verdeckt und eine verständliche Fehlermeldung ermöglicht einen erneuten Versuch.
-3. **Given** das Passwort `survival`, **When** PERSON es eingibt, **Then** erscheint die Begrüßung und sie kann das Kit nutzen.
+3. **Given** das Passwort `survival`, **When** die nutzende Person es eingibt, **Then** erscheint die Begrüßung und sie kann das Kit nutzen.
 4. **Given** die Seite wird öffentlich bereitgestellt, **When** jemand den Quelltext oder eine direkte Adresse einer bereitgestellten Datei aufruft, **Then** können Passwort und veröffentlichte Inhalte auch ohne Abfrage einsehbar sein.
-5. **Given** das Kit ist geöffnet, **When** PERSON die Ansicht wieder sperrt, **Then** erscheint erneut die Passwortabfrage und die normale Kit-Ansicht ist verdeckt.
-6. **Given** das Kit ist geöffnet, **When** PERSON die Seite neu lädt, **Then** erscheint die Passwortabfrage erneut und die normale Kit-Ansicht bleibt bis zur richtigen Eingabe verdeckt.
+5. **Given** das Kit ist geöffnet, **When** die nutzende Person die Ansicht wieder sperrt, **Then** erscheint erneut die Passwortabfrage und die normale Kit-Ansicht ist verdeckt.
+6. **Given** das Kit ist geöffnet, **When** die nutzende Person die Seite neu lädt, **Then** erscheint die Passwortabfrage erneut und die normale Kit-Ansicht bleibt bis zur richtigen Eingabe verdeckt.
 
 ### User Story 3 - Eine andere Art Überraschung wählen (Priority: P2)
 
-PERSON kann nach einer Überraschung „Something different“ wählen oder eine kleine Auswahl nach Inhaltsart öffnen, um etwa etwas Lustiges, eine persönliche Nachricht oder einen ruhigen Moment zu erleben.
+Die nutzende Person kann nach einer Überraschung „Something different“ wählen oder eine kleine Auswahl nach Inhaltsart öffnen, um etwa etwas Lustiges, eine persönliche Nachricht oder einen ruhigen Moment zu erleben.
 
 **Why this priority**: Der Strom bleibt abwechslungsreich und gibt gleichzeitig Kontrolle, ohne den ersten Moment zu verzögern.
 
@@ -59,13 +59,13 @@ PERSON kann nach einer Überraschung „Something different“ wählen oder eine
 
 **Acceptance Scenarios**:
 
-1. **Given** mindestens zwei Inhaltsarten verfügbar sind, **When** PERSON „Something different“ wählt, **Then** erscheint eine Überraschung einer anderen Art als die aktuelle.
-2. **Given** eine Auswahl der Inhaltsarten ist geöffnet, **When** PERSON eine verfügbare Art wählt, **Then** erscheint eine passende Überraschung und weitere Abrufe bleiben bei dieser Art, bis sie die Auswahl ändert.
-3. **Given** eine Inhaltsart ausgewählt ist, **When** PERSON die Auswahl auf alle Arten zurücksetzt, **Then** stehen wieder alle verfügbaren Überraschungen zur Auswahl.
+1. **Given** mindestens zwei Inhaltsarten verfügbar sind, **When** die nutzende Person „Something different“ wählt, **Then** erscheint eine Überraschung einer anderen Art als die aktuelle.
+2. **Given** eine Auswahl der Inhaltsarten ist geöffnet, **When** die nutzende Person eine verfügbare Art wählt, **Then** erscheint eine passende Überraschung und weitere Abrufe bleiben bei dieser Art, bis sie die Auswahl ändert.
+3. **Given** eine Inhaltsart ausgewählt ist, **When** die nutzende Person die Auswahl auf alle Arten zurücksetzt, **Then** stehen wieder alle verfügbaren Überraschungen zur Auswahl.
 
 ### User Story 4 - Eine Überraschung wiederfinden (Priority: P3)
 
-PERSON kann bereits gesehene Überraschungen während ihres Besuchs wieder aufrufen, ohne zufällig auf sie warten zu müssen.
+Die nutzende Person kann bereits gesehene Überraschungen während ihres Besuchs wieder aufrufen, ohne zufällig auf sie warten zu müssen.
 
 **Why this priority**: Wiederfinden macht persönliche Inhalte bei längerer Nutzung zugänglich, ohne den schnellen Einstieg zu beeinträchtigen.
 
@@ -73,7 +73,7 @@ PERSON kann bereits gesehene Überraschungen während ihres Besuchs wieder aufru
 
 **Acceptance Scenarios**:
 
-1. **Given** PERSON hat mindestens eine Überraschung gesehen, **When** sie die Übersicht öffnet, **Then** kann sie eine gesehene Überraschung anhand einer verständlichen Bezeichnung erneut öffnen.
+1. **Given** die nutzende Person hat mindestens eine Überraschung gesehen, **When** sie die Übersicht öffnet, **Then** kann sie eine gesehene Überraschung anhand einer verständlichen Bezeichnung erneut öffnen.
 2. **Given** sie hat noch keine Überraschung gesehen, **When** sie die Übersicht öffnet, **Then** wird ein verständlicher leerer Zustand angezeigt.
 
 ### Edge Cases
@@ -96,11 +96,11 @@ PERSON kann bereits gesehene Überraschungen während ihres Besuchs wieder aufru
 - **FR-004**: Der Name DARF ohne ausdrückliche Zustimmung nicht über den laufenden Besuch hinaus gespeichert oder an Dritte weitergegeben werden.
 - **FR-005**: „Another one“ MUSS eine weitere Überraschung aus den aktuell passenden Inhalten zeigen und Wiederholungen vermeiden, bis alle passenden Inhalte gezeigt wurden; bei nur einem passenden Inhalt ist Wiederholung erlaubt. Beim Wechsel der Inhaltsauswahl beginnt ein neuer Durchlauf.
 - **FR-006**: „Something different“ MUSS bei mindestens zwei verfügbaren Inhaltsarten eine Überraschung einer anderen Art als der aktuellen zeigen und eine aktive Auswahl auf alle Arten zurücksetzen.
-- **FR-007**: PERSON MUSS eine verfügbare Inhaltsart auswählen und anschließend zu allen Arten zurückkehren können; weitere Abrufe berücksichtigen die aktive Auswahl.
+- **FR-007**: die nutzende Person MUSS eine verfügbare Inhaltsart auswählen und anschließend zu allen Arten zurückkehren können; weitere Abrufe berücksichtigen die aktive Auswahl.
 - **FR-008**: Bereits gesehene Überraschungen MÜSSEN während des laufenden Besuchs über eine verständliche Übersicht erneut erreichbar sein.
 - **FR-009**: Vor der Begrüßung und nach jedem Neuladen MUSS die normale Seitenansicht das Passwort `survival` abfragen; der Freigabezustand wird nicht über das Neuladen hinaus gespeichert.
 - **FR-010**: Bei falschem oder fehlendem Passwort MUSS die normale Kit-Ansicht verdeckt bleiben und ein erneuter Versuch möglich sein. Die Abfrage ist keine echte Zugriffskontrolle und schützt weder Quelltext noch direkte Dateizugriffe.
-- **FR-011**: PERSON MUSS die normale Kit-Ansicht wieder sperren können; danach erscheint erneut die Passwortabfrage. Dies widerruft keinen direkten Zugriff auf bereitgestellte Dateien.
+- **FR-011**: die nutzende Person MUSS die normale Kit-Ansicht wieder sperren können; danach erscheint erneut die Passwortabfrage. Dies widerruft keinen direkten Zugriff auf bereitgestellte Dateien.
 - **FR-012**: Die erste Version MUSS mindestens zwei Inhaltsarten und insgesamt mindestens sechs veröffentlichbare Überraschungen enthalten, darunter humorvolle und ruhige Inhalte. Persönliche Inhalte dürfen nur mit Einverständnis veröffentlicht werden; alle Beteiligten müssen wissen, dass die Abfrage deren Vertraulichkeit nicht gewährleistet.
 - **FR-013**: Alle wesentlichen Bedienelemente MÜSSEN auf mobilen und großen Anzeigen, mit Tastatur und mit Screenreader nutzbar sein; reduzierte Bewegung MUSS respektiert werden.
 - **FR-014**: Ton DARF nicht automatisch starten; Humor und Botschaften DÜRFEN nicht zu erzwungenem Optimismus oder einer Reaktion verpflichten.
@@ -108,7 +108,7 @@ PERSON kann bereits gesehene Überraschungen während ihres Besuchs wieder aufru
 
 ### Key Entities *(include if feature involves data)*
 
-- **Kit**: Das für PERSON bestimmte Geschenk mit einer einfachen Passwortabfrage und einer Sammlung von Überraschungen.
+- **Kit**: Das für die nutzende Person bestimmte Geschenk mit einer einfachen Passwortabfrage und einer Sammlung von Überraschungen.
 - **Überraschung**: Ein anzeigbarer Inhalt mit verständlicher Bezeichnung und Inhaltsart; dazu können Medien gehören, die bei öffentlicher Bereitstellung direkt erreichbar sein können.
 - **Besuch**: Ein zeitlich begrenzter Nutzungsvorgang mit optionalem Namen, Zugangszustand, aktiver Inhaltsart und Liste bereits gesehener Überraschungen.
 
@@ -124,7 +124,7 @@ PERSON kann bereits gesehene Überraschungen während ihres Besuchs wieder aufru
 
 ## Assumptions
 
-- Die erste Version ist ein einzelnes Kit für PERSON; eine Erstellen-Maske und getrennte Kits für mehrere Nutzende sind nicht Teil dieses Features.
+- Die erste Version ist ein einzelnes Kit für die nutzende Person; eine Erstellen-Maske und getrennte Kits für mehrere Nutzende sind nicht Teil dieses Features.
 - Die Oberfläche bleibt zunächst englischsprachig. Die endgültigen persönlichen Texte und Medien werden später mit Einverständnis ausgewählt; diese Spezifikation enthält keine privaten Botschaften.
 - Der Name und die Liste gesehener Überraschungen gelten nur für den laufenden Besuch; ein dauerhaftes Profil ist nicht erforderlich.
 - Bei öffentlicher Bereitstellung sind das Passwort sowie veröffentlichte Texte und Medien grundsätzlich öffentlich zugänglich. Die Abfrage ist lediglich eine Einstiegshürde; sie ist kein Datenschutz oder Ersatz für echte Zugriffskontrolle.

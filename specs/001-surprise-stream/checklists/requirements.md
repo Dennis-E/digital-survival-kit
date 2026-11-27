@@ -1,4 +1,4 @@
-# Specification Quality Checklist: Überraschungsstrom für PERSON
+# Specification Quality Checklist: Überraschungsstrom für die nutzende Person
 
 **Purpose**: Validate specification completeness and quality before proceeding to planning
 **Created**: 2026-11-24

@@ -38,6 +38,24 @@ test('contains at least three verified active fascination moments', () => {
   assert.ok(fascination.every(item => item.kind === 'iframe' && item.rightsStatus === 'approved' && item.embedStatus === 'verified'));
 });
 
+test('includes the new official People Are Awesome compilations', () => {
+  const items = new SurpriseDeck(sandbox.items).items;
+  const videos = {
+    'fascination-best-of-2015': 'vLT3A0a3hoQ',
+    'fascination-best-of-2016': 'x3eIKSXXncc',
+    'fascination-best-so-far': 'BvJIfDy6CVQ',
+    'fascination-best-of-the-month': 'iM_yrugA80o'
+  };
+  for (const [id, videoId] of Object.entries(videos)) {
+    const item = items.find(entry => entry.id === id);
+    assert.ok(item);
+    assert.equal(item.creator, 'People Are Awesome');
+    assert.equal(new URL(item.sourceUrl).searchParams.get('v'), videoId);
+    assert.equal(new URL(item.embedUrl).pathname, `/embed/${videoId}`);
+    assert.equal(items.filter(entry => entry.kind === 'iframe' && new URL(entry.embedUrl).pathname === `/embed/${videoId}`).length, 1);
+  }
+});
+
 test('contains at least fifty uploaded active GIF magical moments', () => {
   const uploaded = new SurpriseDeck(sandbox.items).items.filter(item => item.category === 'magical' && item.kind === 'gif' && item.id.startsWith('gif-'));
   assert.ok(uploaded.length >= 50);

@@ -3,8 +3,8 @@
 ## 1. Media Embedding
 
 - **Decision:** GIF and video content appears inside the existing surprise card in an iframe or a controlled media frame, never as an automatic redirect.
-- **Rationale:** This keeps PERSON in the kit and uses familiar embedded-player behavior without moving through another website.
-- **Alternatives considered:** External links and a popup window. Rejected because they remove PERSON from the current experience and add less predictable privacy and layout behavior.
+- **Rationale:** This keeps the visitor in the kit and uses familiar embedded-player behavior without moving through another website.
+- **Alternatives considered:** External links and a popup window. Rejected because they remove the visitor from the current experience and add less predictable privacy and layout behavior.
 
 ## 2. GIF Source Strategy
 

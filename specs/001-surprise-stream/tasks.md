@@ -1,8 +1,8 @@
 ---
-description: "Aufgaben für den Überraschungsstrom für PERSON"
+description: "Aufgaben für den Überraschungsstrom für die nutzende Person"
 ---
 
-# Tasks: Überraschungsstrom für PERSON
+# Tasks: Überraschungsstrom für die nutzende Person
 
 **Input**: `specs/001-surprise-stream/spec.md`, `plan.md`, `data-model.md`, `research.md`, `contracts/ui.md` und `quickstart.md`.
 

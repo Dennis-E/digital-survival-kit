@@ -5,8 +5,6 @@ const path = require('node:path');
 test('opens the external site only after a click in a separate tab', async ({ page, context }) => {
   await context.route('https://neal.fun/**', route => route.fulfill({ status: 200, contentType: 'text/html', body: '<title>External test site</title>' }));
   await page.goto(pathToFileURL(path.resolve(__dirname, '../../index.html')).href);
-  await page.getByLabel('Password').fill('survival');
-  await page.getByRole('button', { name: 'Open kit' }).click();
   await page.getByRole('button', { name: 'Skip' }).click();
   const urls = [];
   for (let index = 0; index < 8; index += 1) {
@@ -28,8 +26,6 @@ test('opens the external site only after a click in a separate tab', async ({ pa
 test('external links require a click and leave the kit available offline', async ({ page, context }) => {
   await page.route('https://**/*', route => route.abort());
   await page.goto(pathToFileURL(path.resolve(__dirname, '../../index.html')).href);
-  await page.getByLabel('Password').fill('survival');
-  await page.getByRole('button', { name: 'Open kit' }).click();
   await page.getByRole('button', { name: 'Skip' }).click();
   await page.getByRole('button', { name: "Let's play" }).click();
   const link = page.locator('#external-link');

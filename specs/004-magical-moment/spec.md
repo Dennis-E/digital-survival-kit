@@ -12,7 +12,7 @@
 
 ### User Story 1 - One Magical Moment Choice (Priority: P1)
 
-PERSON sees one clear action named "Magical moment" instead of separate "Make me laugh" and "Show me a GIF" actions. The action brings together a short joke or an embedded GIF, so every choice feels playful and varied.
+the visitor sees one clear action named "Magical moment" instead of separate "Make me laugh" and "Show me a GIF" actions. The action brings together a short joke or an embedded GIF, so every choice feels playful and varied.
 
 **Why this priority**: This reduces clutter and makes the kit quicker and easier to use.
 
@@ -20,7 +20,7 @@ PERSON sees one clear action named "Magical moment" instead of separate "Make me
 
 **Acceptance Scenarios**:
 
-1. **Given** the kit is open, **When** PERSON chooses "Magical moment", **Then** she receives either a short joke or a GIF moment.
+1. **Given** the kit is open, **When** the visitor chooses "Magical moment", **Then** she receives either a short joke or a GIF moment.
 2. **Given** at least two active items exist, **When** one magical moment follows another, **Then** the immediately previous item is not shown again.
 3. **Given** GIF items exist, **When** an item is selected, **Then** the GIF is shown inside the kit in an embedded frame.
 4. **Given** a GIF cannot be loaded, **When** that item is selected, **Then** a short understandable fallback appears and another moment remains available.
@@ -29,15 +29,15 @@ PERSON sees one clear action named "Magical moment" instead of separate "Make me
 
 ### User Story 2 - Something Fascinating (Priority: P1)
 
-PERSON sees a new clear action named "Something fascinating". It shows a short, positive, surprising or inspiring video or embedded fascination moment without leaving the kit.
+the visitor sees a new clear action named "Something fascinating". It shows a short, positive, surprising or inspiring video or embedded fascination moment without leaving the kit.
 
-**Why this priority**: It adds a new category of delight and lets PERSON discover uplifting material quickly.
+**Why this priority**: It adds a new category of delight and lets the visitor discover uplifting material quickly.
 
 **Independent Test**: Choosing "Something fascinating" several times opens only approved, embeddable, age-appropriate fascination items, with text alternatives and working playback controls.
 
 **Acceptance Scenarios**:
 
-1. **Given** the fascination category has active items, **When** PERSON chooses "Something fascinating", **Then** the kit shows an embedded video or other fascination moment.
+1. **Given** the fascination category has active items, **When** the visitor chooses "Something fascinating", **Then** the kit shows an embedded video or other fascination moment.
 2. **Given** embedded video content, **When** it is selected, **Then** the kit provides a title and a short description before playback.
 3. **Given** an embedded video cannot be loaded, **When** that item is selected, **Then** a short fallback explains the problem and another action remains available.
 4. **Given** reduced motion is enabled, **When** a fascination item is considered, **Then** motion and autoplay are not forced.
@@ -46,7 +46,7 @@ PERSON sees a new clear action named "Something fascinating". It shows a short, 
 
 ### User Story 3 - Short, Quiet Interface Copy (Priority: P2)
 
-PERSON sees short, friendly interface sentences. Technical notices about external tabs, internet access, advertising, consent prompts or data collection are removed or replaced with one simple source or availability note only where needed.
+the visitor sees short, friendly interface sentences. Technical notices about external tabs, internet access, advertising, consent prompts or data collection are removed or replaced with one simple source or availability note only where needed.
 
 **Why this priority**: It keeps the experience warm and uncomplicated while avoiding repeated warnings that distract from the moment.
 
@@ -54,7 +54,7 @@ PERSON sees short, friendly interface sentences. Technical notices about externa
 
 **Acceptance Scenarios**:
 
-1. **Given** PERSON sees the main actions, **When** the kit is open, **Then** the primary choices are "Magical moment", "Something fascinating" and "Let's play" plus "I'm feeling lucky".
+1. **Given** the visitor sees the main actions, **When** the kit is open, **Then** the primary choices are "Magical moment", "Something fascinating" and "Let's play" plus "I'm feeling lucky".
 2. **Given** an embedded GIF or video is used, **When** it displays, **Then** it is not accompanied by the old phrases about external tabs, internet requirement, advertising or privacy prompts.
 3. **Given** a source matters to attribution or rights, **When** it is shown, **Then** it is short and unobtrusive.
 
@@ -102,7 +102,7 @@ PERSON sees short, friendly interface sentences. Technical notices about externa
 
 ### Measurable Outcomes
 
-- **SC-001**: On desktop and mobile, PERSON can reach a magical moment in no more than two clicks after the kit opens.
+- **SC-001**: On desktop and mobile, the visitor can reach a magical moment in no more than two clicks after the kit opens.
 - **SC-002**: At least 90 percent of tested primary interactions complete without a broken label, missing media fallback or overlap.
 - **SC-003**: The main selection area contains exactly the three requested primary choices: "Magical moment", "Something fascinating" and "Let's play", plus the existing lucky action.
 - **SC-004**: At least six active, distinct magical moments are available; repeated selection does not immediately repeat the previous item.

@@ -6,12 +6,9 @@ const pageUrl = pathToFileURL(path.resolve(__dirname, '../../index.html')).href;
 
 test('opens the kit, greets by name and shows each surprise once', async ({ page }) => {
   await page.goto(pageUrl);
-  await page.getByLabel('Password').fill('survival');
-  await page.getByRole('button', { name: 'Open kit' }).click();
-  await expect(page.getByLabel('Your name')).toBeFocused();
-  await page.keyboard.type('PERSON');
+  await page.getByLabel('Your name').fill('Alex');
   await page.getByRole('button', { name: 'Continue' }).click();
-  await expect(page.getByText('For you, PERSON')).toBeVisible();
+  await expect(page.getByText('For you, Alex')).toBeVisible();
   await expect(page.locator('#surprise-iframe')).toBeVisible();
   const count = await page.evaluate(() => new SurpriseDeck(surprises).items.length);
   const titles = [];
@@ -26,8 +23,6 @@ test('opens the kit, greets by name and shows each surprise once', async ({ page
 
 test('skipping the name uses a neutral greeting', async ({ page }) => {
   await page.goto(pageUrl);
-  await page.getByLabel('Password').fill('survival');
-  await page.getByRole('button', { name: 'Open kit' }).click();
   await page.getByRole('button', { name: 'Skip' }).click();
   await expect(page.getByText('For you, friend')).toBeVisible();
 });

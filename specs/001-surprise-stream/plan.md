@@ -1,4 +1,4 @@
-# Implementation Plan: Überraschungsstrom für PERSON
+# Implementation Plan: Überraschungsstrom für die nutzende Person
 
 **Branch**: `main` | **Date**: 2026-11-24 | **Spec**: [spec.md](spec.md)
 

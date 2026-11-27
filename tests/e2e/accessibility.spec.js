@@ -5,11 +5,8 @@ const path = require('node:path');
 test('supports the main flow with keyboard and reduced motion', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto(pathToFileURL(path.resolve(__dirname, '../../index.html')).href);
-  await page.getByLabel('Password').focus();
-  await page.keyboard.type('survival');
-  await page.keyboard.press('Enter');
-  await expect(page.getByLabel('Your name')).toBeFocused();
-  await page.keyboard.type('PERSON');
+  await page.getByLabel('Your name').focus();
+  await page.keyboard.type('Alex');
   await page.keyboard.press('Enter');
   await expect(page.locator('#stream-heading')).toBeFocused();
   await page.getByRole('button', { name: 'Magical moment' }).focus();

@@ -26,7 +26,7 @@ Das bestehende statische Kit erhält einen humorvollen Einstieg ohne Straßenmot
 
 **Constraints**: Drei Kategorien und ein größerer übergreifender Button, keine doppelte Kategorieauswahl; keine Straße, kein automatisch startender Ton, keine unkontrollierbare Bewegung; Texte und Navigation ohne Netzwerk; nur für Veröffentlichung freigegebene Medien und Links. Keine vertraulichen öffentlichen Inhalte.
 
-**Scale/Scope**: Ein Kit für PERSON; keine Mehrmandanten-Erstellung, kein echter Zugriffsschutz und keine Integration fremder Medien ohne geprüfte Rechte.
+**Scale/Scope**: Ein Kit für die nutzende Person; keine Mehrmandanten-Erstellung, kein echter Zugriffsschutz und keine Integration fremder Medien ohne geprüfte Rechte.
 
 ## Constitution Check
 

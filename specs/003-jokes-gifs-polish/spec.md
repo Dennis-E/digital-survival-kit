@@ -12,7 +12,7 @@
 
 ### User Story 1 - Echte Witze lesen (Priority: P1)
 
-PERSON wählt „Make me laugh“ und erhält kurze, bewusst alberne englische Witze oder Wortspiele, statt vorwiegend tröstender Mitteilungen. Erneutes Auswählen liefert einen weiteren Witz.
+Die nutzende Person wählt „Make me laugh“ und erhält kurze, bewusst alberne englische Witze oder Wortspiele, statt vorwiegend tröstender Mitteilungen. Erneutes Auswählen liefert einen weiteren Witz.
 
 **Why this priority**: Die Kategorie soll tatsächlich das einlösen, was ihre Beschriftung verspricht.
 
@@ -20,13 +20,13 @@ PERSON wählt „Make me laugh“ und erhält kurze, bewusst alberne englische W
 
 **Acceptance Scenarios**:
 
-1. **Given** PERSON ist im Kit, **When** sie „Make me laugh“ auswählt, **Then** erscheint ein kurzer englischer Witz oder ein Wortspiel mit erkennbarer Pointe.
-2. **Given** mindestens zwei Witze verfügbar sind, **When** PERSON die Kategorie erneut auswählt, **Then** erscheint ein anderer Witz und nicht unmittelbar derselbe erneut.
+1. **Given** die nutzende Person ist im Kit, **When** sie „Make me laugh“ auswählt, **Then** erscheint ein kurzer englischer Witz oder ein Wortspiel mit erkennbarer Pointe.
+2. **Given** mindestens zwei Witze verfügbar sind, **When** die nutzende Person die Kategorie erneut auswählt, **Then** erscheint ein anderer Witz und nicht unmittelbar derselbe erneut.
 3. **Given** die Witze werden durchgesehen, **When** sie beurteilt werden, **Then** sind sie liebevoll und albern, ohne Witze auf Kosten der Person oder ihrer Gefühle.
 
 ### User Story 2 - Abwechslungsreiche lustige GIFs entdecken (Priority: P1)
 
-PERSON öffnet „Show me a GIF“ und entdeckt verschiedene lustige Animationen, beispielsweise Katzen, Szenen aus The Office, harmlose menschliche Missgeschicke und Sprachpannen. Der bisherige Stempel ist nicht mehr der einzige Inhalt.
+Die nutzende Person öffnet „Show me a GIF“ und entdeckt verschiedene lustige Animationen, beispielsweise Katzen, Szenen aus The Office, harmlose menschliche Missgeschicke und Sprachpannen. Der bisherige Stempel ist nicht mehr der einzige Inhalt.
 
 **Why this priority**: Eine Auswahl tatsächlicher unterschiedlicher GIFs ist der zentrale Wunsch hinter der Kritik am bisherigen Stempel.
 
@@ -34,14 +34,14 @@ PERSON öffnet „Show me a GIF“ und entdeckt verschiedene lustige Animationen
 
 **Acceptance Scenarios**:
 
-1. **Given** die GIF-Kategorie enthält mehrere freigegebene Animationen, **When** PERSON sie wiederholt auswählt, **Then** erscheinen unterschiedliche GIF-Inhalte und nicht lediglich Varianten der Stempelanimation.
+1. **Given** die GIF-Kategorie enthält mehrere freigegebene Animationen, **When** die nutzende Person sie wiederholt auswählt, **Then** erscheinen unterschiedliche GIF-Inhalte und nicht lediglich Varianten der Stempelanimation.
 2. **Given** das Kit bereit für Veröffentlichung ist, **When** seine GIF-Inhalte geprüft werden, **Then** sind mindestens vier unterschiedliche Animationen vorhanden, darunter Motive zu Katzen, The Office, harmlosen menschlichen Missgeschicken und englischen Sprachpannen; Überschneidungen sind möglich, ersetzen aber nicht vier unterschiedliche Animationen.
-3. **Given** ein GIF wird angezeigt, **When** PERSON Bewegung reduzieren oder stoppen möchte, **Then** ist eine verständliche ruhige Alternative oder eine Steuerung verfügbar; das Kit startet keinen Ton automatisch.
+3. **Given** ein GIF wird angezeigt, **When** die nutzende Person Bewegung reduzieren oder stoppen möchte, **Then** ist eine verständliche ruhige Alternative oder eine Steuerung verfügbar; das Kit startet keinen Ton automatisch.
 4. **Given** Nutzungsrechte für ein GIF, insbesondere eine Szene aus The Office, sind nicht geklärt, **When** eine Veröffentlichung vorbereitet wird, **Then** wird dieses GIF nicht ungeprüft veröffentlicht; die ausstehende Freigabe und ihre Auswirkung auf die inhaltliche Vollständigkeit bleiben sichtbar.
 
 ### User Story 3 - Direkt und mit weniger Ablenkung starten (Priority: P1)
 
-Nach richtiger Passworteingabe kann PERSON sofort ihren Namen eingeben, ohne zunächst zum Eingabefeld navigieren zu müssen. Die Oberfläche verzichtet auf die vom Nutzer als überflüssig empfundenen Bedienelemente „Seen so far“ und „Lock kit“.
+Nach richtiger Passworteingabe kann die nutzende Person sofort ihren Namen eingeben, ohne zunächst zum Eingabefeld navigieren zu müssen. Die Oberfläche verzichtet auf die vom Nutzer als überflüssig empfundenen Bedienelemente „Seen so far“ und „Lock kit“.
 
 **Why this priority**: Ein direkter Einstieg und weniger sichtbare Optionen machen das Geschenk leichter nutzbar.
 
@@ -49,14 +49,14 @@ Nach richtiger Passworteingabe kann PERSON sofort ihren Namen eingeben, ohne zun
 
 **Acceptance Scenarios**:
 
-1. **Given** die Passwortabfrage ist sichtbar, **When** PERSON das richtige Passwort bestätigt, **Then** ist das Feld „Your name“ direkt fokussiert und für die Eingabe bereit.
-2. **Given** PERSON möchte keinen Namen eingeben, **When** sie Skip wählt, **Then** erscheint weiterhin unmittelbar eine Überraschung mit neutraler Anrede.
-3. **Given** PERSON sieht die Überraschungsansicht, **When** sie die verfügbaren Bedienelemente betrachtet, **Then** sind weder „Seen so far“ noch „Lock kit“ sichtbar oder per Tastatur erreichbar.
-4. **Given** die Seite wird neu geladen, **When** PERSON das Kit erneut öffnet, **Then** erscheint weiterhin die bisherige Passwortabfrage; sie ist keine echte Zugriffskontrolle.
+1. **Given** die Passwortabfrage ist sichtbar, **When** die nutzende Person das richtige Passwort bestätigt, **Then** ist das Feld „Your name“ direkt fokussiert und für die Eingabe bereit.
+2. **Given** die nutzende Person möchte keinen Namen eingeben, **When** sie Skip wählt, **Then** erscheint weiterhin unmittelbar eine Überraschung mit neutraler Anrede.
+3. **Given** die nutzende Person sieht die Überraschungsansicht, **When** sie die verfügbaren Bedienelemente betrachtet, **Then** sind weder „Seen so far“ noch „Lock kit“ sichtbar oder per Tastatur erreichbar.
+4. **Given** die Seite wird neu geladen, **When** die nutzende Person das Kit erneut öffnet, **Then** erscheint weiterhin die bisherige Passwortabfrage; sie ist keine echte Zugriffskontrolle.
 
 ### User Story 4 - Eine klare Kopf- und Fußzeile sehen (Priority: P2)
 
-PERSON sieht eine reduzierte Beschriftung ohne doppelte Botschaften: Die persönliche Widmung steht im Kopfbereich; die humorvolle Herstellerzeile steht unten.
+Die nutzende Person sieht eine reduzierte Beschriftung ohne doppelte Botschaften: Die persönliche Widmung steht im Kopfbereich; die humorvolle Herstellerzeile steht unten.
 
 **Why this priority**: Weniger wiederholter Text unterstützt die gewünschte klare, spielerische Oberfläche.
 
@@ -64,9 +64,9 @@ PERSON sieht eine reduzierte Beschriftung ohne doppelte Botschaften: Die persön
 
 **Acceptance Scenarios**:
 
-1. **Given** eine Ansicht ist geöffnet, **When** PERSON den Kopfbereich sieht, **Then** steht dort „Made for one very good human“ statt „A little something for you“.
-2. **Given** eine Ansicht ist geöffnet, **When** PERSON den unteren Bereich sieht, **Then** steht dort „Made with care & questionable humour“ genau einmal an der bisherigen Stelle von „Made for one very good human“.
-3. **Given** eine Ansicht ist geöffnet, **When** PERSON die übrigen Fußtexte betrachtet, **Then** erscheinen weder eine zweite Kopie von „Made with care & questionable humour“ noch „Est. for the hard days“.
+1. **Given** eine Ansicht ist geöffnet, **When** die nutzende Person den Kopfbereich sieht, **Then** steht dort „Made for one very good human“ statt „A little something for you“.
+2. **Given** eine Ansicht ist geöffnet, **When** die nutzende Person den unteren Bereich sieht, **Then** steht dort „Made with care & questionable humour“ genau einmal an der bisherigen Stelle von „Made for one very good human“.
+3. **Given** eine Ansicht ist geöffnet, **When** die nutzende Person die übrigen Fußtexte betrachtet, **Then** erscheinen weder eine zweite Kopie von „Made with care & questionable humour“ noch „Est. for the hard days“.
 
 ### Edge Cases
 
@@ -116,7 +116,7 @@ PERSON sieht eine reduzierte Beschriftung ohne doppelte Botschaften: Die persön
 
 ## Assumptions
 
-- Die Oberfläche und die Witze bleiben zunächst englischsprachig und für PERSON gedacht. Das Feedback beschreibt eine Überarbeitung der bestehenden Erfahrung, kein neues Mehrmandantensystem.
+- Die Oberfläche und die Witze bleiben zunächst englischsprachig und für die nutzende Person gedacht. Das Feedback beschreibt eine Überarbeitung der bestehenden Erfahrung, kein neues Mehrmandantensystem.
 - „Seen so far“ und „Lock kit“ werden entfernt, obwohl frühere Spezifikationen diese Bedienelemente vorgesehen haben. Das Neuladen fragt das Passwort weiterhin erneut ab.
 - Die bestehende Freigabehürde bleibt bewusst einfach und bietet keinen Schutz vertraulicher Inhalte. Keine persönlichen Informationen ohne Einverständnis veröffentlichen.
 - Die bisherigen „Let's play“-Links werden nicht durch neue Vorschläge ersetzt. Ein zuvor offener Prüfpunkt zur Tonwiedergabe der Fremdseite bleibt als bestehendes Risiko bestehen.

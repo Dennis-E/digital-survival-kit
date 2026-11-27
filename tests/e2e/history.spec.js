@@ -4,8 +4,6 @@ const path = require('node:path');
 
 test('does not expose history or lock controls to the keyboard', async ({ page }) => {
   await page.goto(pathToFileURL(path.resolve(__dirname, '../../index.html')).href);
-  await page.getByLabel('Password').fill('survival');
-  await page.getByRole('button', { name: 'Open kit' }).click();
   await page.getByRole('button', { name: 'Skip' }).click();
   await expect(page.getByRole('button', { name: 'Seen so far' })).toHaveCount(0);
   await expect(page.getByRole('button', { name: 'Lock kit' })).toHaveCount(0);

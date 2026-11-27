@@ -1,9 +1,5 @@
-const passwordView = document.querySelector('#password-view');
 const greetingView = document.querySelector('#greeting-view');
 const surpriseView = document.querySelector('#surprise-view');
-const passwordForm = document.querySelector('#password-form');
-const passwordInput = document.querySelector('#password');
-const passwordError = document.querySelector('#password-error');
 const nameForm = document.querySelector('#name-form');
 const nameInput = document.querySelector('#visitor-name');
 const heading = document.querySelector('#stream-heading');
@@ -24,7 +20,7 @@ const labels = { magical: 'MAGICAL MOMENT', fascinating: 'SOMETHING FASCINATING'
 let deck = new SurpriseDeck(surprises);
 
 function showView(view, focusTarget) {
-  [passwordView, greetingView, surpriseView].forEach(section => { section.hidden = section !== view; });
+  [greetingView, surpriseView].forEach(section => { section.hidden = section !== view; });
   document.querySelector('.experience').classList.toggle('is-open', view === surpriseView);
   focusTarget.focus();
 }
@@ -95,20 +91,6 @@ function updateSelection(category) {
     button.setAttribute('aria-pressed', String(button.dataset.category === category));
   });
 }
-
-passwordForm.addEventListener('submit', event => {
-  event.preventDefault();
-  if (passwordInput.value !== 'survival') {
-    passwordError.textContent = 'Our extremely serious security system says no. Try again.';
-    passwordInput.setAttribute('aria-invalid', 'true');
-    passwordInput.focus();
-    return;
-  }
-  passwordInput.value = '';
-  passwordInput.removeAttribute('aria-invalid');
-  passwordError.textContent = '';
-  showView(greetingView, nameInput);
-});
 
 nameForm.addEventListener('submit', event => {
   event.preventDefault();

@@ -6,14 +6,14 @@ A small digital survival kit for a friend on a tough day. Built with plain HTML,
 
 Open `index.html` in a browser. The artwork, GIF and core interactions work offline; the optional fonts and external game links require an internet connection.
 
-Enter `survival` to open the kit. The password is checked only in the browser and is requested again after a reload.
+Enter a name or skip the greeting to open the kit. The name is used only in the current page and is not saved by the application.
 
 ## Make it yours
 
 - Change the copy in `index.html` and the surprise messages in `js/surprises.js`.
 - Adjust the colors and layout in `style.css`.
 - The four quieter original messages remain in `js/surprises.js` as inactive entries. The content overview and ideas are in `docs/INHALTE.md`; asset and external-link notes are in `assets/CREDITS.md`.
-- The password is not security: anyone can inspect the code or access published files directly. Never publish confidential information. Share personal content only with the consent of everyone involved.
+- Published files are public. Never publish confidential information. Share personal content only with the consent of everyone involved.
 
 ## Test
 
@@ -27,7 +27,7 @@ Install Node.js 24 and run `npm ci` and `npx playwright install chromium` once. 
 4. Open **Build > Pipelines**. The included `.gitlab-ci.yml` creates the Pages artifact and starts deployment.
 5. Open **Deploy > Pages** to find the public URL, usually `https://<namespace>.gitlab.io/<project>/`.
 
-A `.gitlab-ci.yml` change is processed only after it is pushed to the default branch. GitLab Pages is public, and the password is only a browser-side gate.
+A `.gitlab-ci.yml` change is processed only after it is pushed to the default branch. GitLab Pages is public.
 
 ## Publish with GitHub Pages
 

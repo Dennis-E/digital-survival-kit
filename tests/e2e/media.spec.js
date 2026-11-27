@@ -6,8 +6,6 @@ const pageUrl = pathToFileURL(path.resolve(__dirname, '../../index.html')).href;
 
 async function openKit(page) {
   await page.goto(pageUrl);
-  await page.getByLabel('Password').fill('survival');
-  await page.getByRole('button', { name: 'Open kit' }).click();
   await page.getByRole('button', { name: 'Skip' }).click();
   for (let attempt = 0; attempt < 100; attempt += 1) {
     await page.getByRole('button', { name: 'Magical moment' }).click();

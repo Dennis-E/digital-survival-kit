@@ -26,7 +26,7 @@ Das bestehende statische Kit erhält mindestens sechs kurze englische Witze oder
 
 **Constraints**: Keine nicht freigegebenen Fremdmedien veröffentlichen; echte The-Office-Szene nicht durch einen als Original ausgegebenen Platzhalter ersetzen. Kein automatischer Ton, Bewegung kontrollierbar, Texte offline nutzbar; Passwortabfrage ist keine Vertraulichkeitskontrolle.
 
-**Scale/Scope**: Ein Kit für PERSON; keine Änderung an den bestehenden Spiel-Links, kein Mehrmandantensystem und kein neuer Zugangsschutz.
+**Scale/Scope**: Ein Kit für die nutzende Person; keine Änderung an den bestehenden Spiel-Links, kein Mehrmandantensystem und kein neuer Zugangsschutz.
 
 ## Constitution Check
 

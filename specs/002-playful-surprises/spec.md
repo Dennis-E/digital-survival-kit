@@ -12,7 +12,7 @@
 
 ### User Story 1 - Eine lustige Überraschung wählen (Priority: P1)
 
-PERSON sieht nach dem Einstieg eine einzelne, deutlich als Inhalt erkennbare Überraschung. Drei verständlich benannte Kategorien und ein größerer „I'm feeling lucky“-Button ermöglichen neue Inhalte, ohne ein Dropdown oder doppelte Auswahlwege zu benötigen.
+Die nutzende Person sieht nach dem Einstieg eine einzelne, deutlich als Inhalt erkennbare Überraschung. Drei verständlich benannte Kategorien und ein größerer „I'm feeling lucky“-Button ermöglichen neue Inhalte, ohne ein Dropdown oder doppelte Auswahlwege zu benötigen.
 
 **Why this priority**: Die Unterscheidung zwischen Inhalt und Aktion sowie eine einfache Auswahl bestimmen die gesamte Erfahrung.
 
@@ -21,13 +21,13 @@ PERSON sieht nach dem Einstieg eine einzelne, deutlich als Inhalt erkennbare Üb
 **Acceptance Scenarios**:
 
 1. **Given** der Einstieg ist abgeschlossen, **When** die erste Überraschung erscheint, **Then** sind der Inhalt, drei Kategorie-Buttons und der größere „I'm feeling lucky“-Button deutlich voneinander unterscheidbar.
-2. **Given** eine Kategorie ist verfügbar, **When** PERSON ihren Button auswählt, **Then** erscheint eine neue Überraschung dieser Kategorie; erneutes Auswählen liefert eine weitere passende Überraschung, sofern vorhanden.
-3. **Given** mehrere Kategorien sind verfügbar, **When** PERSON „I'm feeling lucky“ auswählt, **Then** erscheint eine Überraschung aus allen verfügbaren Kategorien, unabhängig von der vorherigen Kategorie.
-4. **Given** die Inhaltsauswahl wird angezeigt, **When** PERSON sie nutzt, **Then** gibt es genau drei Kategorie-Buttons und einen größeren übergreifenden Zufalls-Button, kein Kategorie-Dropdown und keinen zweiten Auswahlmechanismus für dieselben Kategorien.
+2. **Given** eine Kategorie ist verfügbar, **When** die nutzende Person ihren Button auswählt, **Then** erscheint eine neue Überraschung dieser Kategorie; erneutes Auswählen liefert eine weitere passende Überraschung, sofern vorhanden.
+3. **Given** mehrere Kategorien sind verfügbar, **When** die nutzende Person „I'm feeling lucky“ auswählt, **Then** erscheint eine Überraschung aus allen verfügbaren Kategorien, unabhängig von der vorherigen Kategorie.
+4. **Given** die Inhaltsauswahl wird angezeigt, **When** die nutzende Person sie nutzt, **Then** gibt es genau drei Kategorie-Buttons und einen größeren übergreifenden Zufalls-Button, kein Kategorie-Dropdown und keinen zweiten Auswahlmechanismus für dieselben Kategorien.
 
 ### User Story 2 - Mit einem Schmunzeln begrüßt werden (Priority: P1)
 
-PERSON wird durch einen kurzen, freundlichen und bewusst albernen Einstieg begrüßt, der neugierig macht, ohne ihre Stimmung zu bewerten oder eine Reaktion zu verlangen. Das bisherige Straßenmotiv wird durch eine passend überraschende, verspielte Bildwelt ersetzt.
+Die nutzende Person wird durch einen kurzen, freundlichen und bewusst albernen Einstieg begrüßt, der neugierig macht, ohne ihre Stimmung zu bewerten oder eine Reaktion zu verlangen. Das bisherige Straßenmotiv wird durch eine passend überraschende, verspielte Bildwelt ersetzt.
 
 **Why this priority**: Bildwelt und erste Worte bestimmen den Ton des persönlichen Geschenks.
 
@@ -35,13 +35,13 @@ PERSON wird durch einen kurzen, freundlichen und bewusst albernen Einstieg begr�
 
 **Acceptance Scenarios**:
 
-1. **Given** die Seite wird geöffnet, **When** PERSON den Einstieg sieht, **Then** prägen eine humorvolle, überraschende Bildwelt und kurze, leichte Texte das Erlebnis; das bisherige Straßenmotiv erscheint nicht mehr.
-2. **Given** die Namensfrage wird angezeigt, **When** PERSON einen Namen eingibt oder überspringt, **Then** gelangt sie unmittelbar zur ersten Überraschung und wird passend persönlich oder neutral angesprochen.
-3. **Given** ein falsches Passwort, **When** PERSON es eingibt, **Then** erhält sie eine freundliche, leicht humorvolle und verständliche Fehlermeldung und kann es erneut versuchen.
+1. **Given** die Seite wird geöffnet, **When** die nutzende Person den Einstieg sieht, **Then** prägen eine humorvolle, überraschende Bildwelt und kurze, leichte Texte das Erlebnis; das bisherige Straßenmotiv erscheint nicht mehr.
+2. **Given** die Namensfrage wird angezeigt, **When** die nutzende Person einen Namen eingibt oder überspringt, **Then** gelangt sie unmittelbar zur ersten Überraschung und wird passend persönlich oder neutral angesprochen.
+3. **Given** ein falsches Passwort, **When** die nutzende Person es eingibt, **Then** erhält sie eine freundliche, leicht humorvolle und verständliche Fehlermeldung und kann es erneut versuchen.
 
 ### User Story 3 - GIFs und unterhaltsame Fundstücke entdecken (Priority: P2)
 
-PERSON kann neben kurzen Texten auch GIFs und ausgewählte unterhaltsame externe Seiten entdecken. Sie erkennt, welche Überraschung sich im Kit abspielt und welche zu einer externen Seite führt.
+Die nutzende Person kann neben kurzen Texten auch GIFs und ausgewählte unterhaltsame externe Seiten entdecken. Sie erkennt, welche Überraschung sich im Kit abspielt und welche zu einer externen Seite führt.
 
 **Why this priority**: Unterschiedliche Medien und Fundstücke sorgen für überraschende Abwechslung.
 
@@ -49,15 +49,15 @@ PERSON kann neben kurzen Texten auch GIFs und ausgewählte unterhaltsame externe
 
 **Acceptance Scenarios**:
 
-1. **Given** eine GIF-Überraschung, **When** sie angezeigt wird, **Then** ist das Motiv verständlich beschrieben und PERSON kann die Bewegung bei Bedarf anhalten oder eine ruhige Alternative nutzen.
-2. **Given** eine Link-Überraschung, **When** PERSON den eindeutig als extern erkennbaren Link wählt, **Then** kann sie die externe Seite besuchen und zum Kit zurückkehren.
-3. **Given** ein GIF oder eine verlinkte Seite ist nicht erreichbar, **When** PERSON es versucht, **Then** bleibt das Kit bedienbar und bietet einen verständlichen nächsten Schritt zu einer anderen Überraschung.
+1. **Given** eine GIF-Überraschung, **When** sie angezeigt wird, **Then** ist das Motiv verständlich beschrieben und die nutzende Person kann die Bewegung bei Bedarf anhalten oder eine ruhige Alternative nutzen.
+2. **Given** eine Link-Überraschung, **When** die nutzende Person den eindeutig als extern erkennbaren Link wählt, **Then** kann sie die externe Seite besuchen und zum Kit zurückkehren.
+3. **Given** ein GIF oder eine verlinkte Seite ist nicht erreichbar, **When** die nutzende Person es versucht, **Then** bleibt das Kit bedienbar und bietet einen verständlichen nächsten Schritt zu einer anderen Überraschung.
 
 ### User Story 4 - Inhalte beurteilen und auswählen (Priority: P2)
 
 Der Absender kann alle derzeit vorhandenen Inhalte und neue Vorschläge in einer Markdown-Übersicht durchsehen und Rückmeldungen dazu geben, bevor persönliche oder fremde Inhalte veröffentlicht werden.
 
-**Why this priority**: Humor und persönliche Passung hängen von PERSON Vorlieben und den Rechten an den Inhalten ab.
+**Why this priority**: Humor und persönliche Passung hängen von der Zielperson Vorlieben und den Rechten an den Inhalten ab.
 
 **Independent Test**: Die Inhaltsübersicht öffnen, vorhandene Einträge mit der laufenden Seite vergleichen und einzelne Vorschläge anhand ihrer Kennung kommentieren.
 
@@ -114,7 +114,7 @@ Der Absender kann alle derzeit vorhandenen Inhalte und neue Vorschläge in einer
 
 ## Assumptions
 
-- Die Oberfläche bleibt zunächst englischsprachig und für PERSON gedacht. Kategorienamen sind Arbeitsvorschläge; zunächst werden „Make me laugh“, „Show me a GIF“ und „Let's play“ angenommen.
+- Die Oberfläche bleibt zunächst englischsprachig und für die nutzende Person gedacht. Kategorienamen sind Arbeitsvorschläge; zunächst werden „Make me laugh“, „Show me a GIF“ und „Let's play“ angenommen.
 - „I'm feeling lucky“ ersetzt die Funktion „Another one“ als übergreifende nächste Überraschung; erneutes Drücken einer Kategorie liefert innerhalb dieser Kategorie weitere Inhalte. Der Verlauf bleibt ein eigenständiger Rückblick und keine vierte Kategorie.
 - Der Absender entscheidet anhand der Übersicht, welche bestehenden und neuen Inhalte bleiben, geändert oder entfernt werden; Ideen sind keine Freigaben.
 - Das bisherige statische Kit und die lokale Passwortabfrage bleiben erhalten; öffentlich bereitgestellte Inhalte und das Passwort sind weiterhin einsehbar.

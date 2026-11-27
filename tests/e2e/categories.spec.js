@@ -4,8 +4,6 @@ const path = require('node:path');
 
 test('offers magical, fascinating, play and a larger lucky action without a dropdown', async ({ page }) => {
   await page.goto(pathToFileURL(path.resolve(__dirname, '../../index.html')).href);
-  await page.getByLabel('Password').fill('survival');
-  await page.getByRole('button', { name: 'Open kit' }).click();
   await page.getByRole('button', { name: 'Skip' }).click();
   await expect(page.locator('#category-actions button')).toHaveCount(4);
   await expect(page.locator('select')).toHaveCount(0);

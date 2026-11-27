@@ -21,9 +21,6 @@ test('layout stays readable without overflow and the original artwork loads', as
   }));
   expect(loaded).toBe(true);
   await page.screenshot({ path: testInfo.outputPath('entry.png'), fullPage: true });
-  await page.getByLabel('Password').fill('survival');
-  await page.getByRole('button', { name: 'Open kit' }).click();
-  await checkFrame();
   await page.getByLabel('Your name').fill('A very long but entirely valid name');
   await page.getByRole('button', { name: 'Continue' }).click();
   await checkFrame();
