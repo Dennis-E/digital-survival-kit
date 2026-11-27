@@ -27,6 +27,19 @@ test('skipping the name uses a neutral greeting', async ({ page }) => {
   await expect(page.getByText('For you, friend')).toBeVisible();
 });
 
+test('randomizes the first fascinating surprise', async ({ page }) => {
+  const titles = [];
+  for (const randomValue of [0, 0.999999]) {
+    const testPage = await page.context().newPage();
+    await testPage.addInitScript(value => { Math.random = () => value; }, randomValue);
+    await testPage.goto(pageUrl);
+    await testPage.getByRole('button', { name: 'Skip' }).click();
+    titles.push(await testPage.locator('#surprise-title').innerText());
+    await testPage.close();
+  }
+  expect(titles[0]).not.toBe(titles[1]);
+});
+
 test('continues if the optional skip button is missing its id', async ({ page }) => {
   const pageErrors = [];
   page.on('pageerror', error => pageErrors.push(error.message));

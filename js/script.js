@@ -82,7 +82,7 @@ function begin(name) {
   heading.textContent = `For you, ${visitorName}`;
   deck = new SurpriseDeck(surprises);
   updateSelection('fascinating');
-  renderSurprise(deck.open('fascination-biking'));
+  renderSurprise(deck.setCategory('fascinating'));
   showView(surpriseView, heading);
 }
 
