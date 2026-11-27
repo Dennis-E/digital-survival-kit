@@ -18,7 +18,7 @@ test('opens the external site only after a click in a separate tab', async ({ pa
   expect(urls).toEqual(expect.arrayContaining(['https://neal.fun/design-the-next-iphone/', 'https://neal.fun/infinite-craft/', 'https://theuselessweb.com/', 'https://quickdraw.withgoogle.com/', 'https://www.patatap.com/', 'https://zoomquilt.org/', 'https://weavesilk.com/', 'https://mondrianandme.com/']));
   expect(context.pages()).toHaveLength(1);
   const popupPromise = page.waitForEvent('popup');
-  await page.locator('#external-link').click();
+  await page.locator('#external-preview-link').click();
   const popup = await popupPromise;
   await popup.waitForLoadState();
   await expect(popup).toHaveURL(/^https:\/\//);
