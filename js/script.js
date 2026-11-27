@@ -17,6 +17,7 @@ const mediaError = document.querySelector('#media-error');
 const motionButton = document.querySelector('#motion-button');
 const externalLink = document.querySelector('#external-link');
 const externalPreview = document.querySelector('#external-preview');
+const externalPreviewLink = document.querySelector('#external-preview-link');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let motionPlaying = false;
 const labels = { magical: 'MAGICAL MOMENT', fascinating: 'SOMETHING FASCINATING', play: 'FIELD TRIP' };
@@ -41,6 +42,8 @@ function renderSurprise(item) {
   externalLink.removeAttribute('href');
   externalPreview.hidden = true;
   externalPreview.removeAttribute('src');
+  externalPreviewLink.hidden = true;
+  externalPreviewLink.removeAttribute('href');
   if (!item) {
     categoryLabel.textContent = 'A LITTLE SOMETHING';
     title.textContent = 'Nothing here just yet.';
@@ -71,6 +74,8 @@ function renderSurprise(item) {
         externalPreview.src = item.preview;
         externalPreview.alt = `${item.linkLabel} preview`;
         externalPreview.hidden = false;
+        externalPreviewLink.href = item.url;
+        externalPreviewLink.hidden = false;
       }
     }
   }
