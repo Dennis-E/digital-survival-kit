@@ -26,3 +26,22 @@ test('skipping the name uses a neutral greeting', async ({ page }) => {
   await page.getByRole('button', { name: 'Skip' }).click();
   await expect(page.getByText('For you, friend')).toBeVisible();
 });
+
+test('continues if the optional skip button is missing its id', async ({ page }) => {
+  const pageErrors = [];
+  page.on('pageerror', error => pageErrors.push(error.message));
+  await page.addInitScript(() => {
+    const observer = new MutationObserver(() => {
+      const skipButton = document.querySelector('#skip-name');
+      if (!skipButton) return;
+      skipButton.removeAttribute('id');
+      observer.disconnect();
+    });
+    observer.observe(document, { childList: true, subtree: true });
+  });
+  await page.goto(pageUrl);
+  await page.getByLabel('Your name').fill('Alex');
+  await page.getByLabel('Your name').press('Enter');
+  await expect(page.getByText('For you, Alex')).toBeVisible();
+  expect(pageErrors).toEqual([]);
+});

@@ -96,7 +96,8 @@ nameForm.addEventListener('submit', event => {
   event.preventDefault();
   begin(nameInput.value);
 });
-document.querySelector('#skip-name').addEventListener('click', () => begin(''));
+const skipNameButton = document.querySelector('#skip-name');
+if (skipNameButton) skipNameButton.addEventListener('click', () => begin(''));
 categoryActions.addEventListener('click', event => {
   const button = event.target.closest('button[data-category]');
   if (!button) return;
